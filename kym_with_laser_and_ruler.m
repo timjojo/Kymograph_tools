@@ -69,12 +69,7 @@ else
 end
 
 % Join laser/ruler to main kymograph
-figure
-imshow(img_laser)
-il = img_laser;
 img_laser = im2double(img_laser);      % Make data types uniform for proper concatenation
-figure
-imshow(img_laser)
 if(show_ruler && show_laser)
     imcomb = cat(1, ruler, img_main, img_laser(1:20,:,:));   % Both laser & ruler
 elseif(~show_ruler && show_laser)
